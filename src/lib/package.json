@@ -1,0 +1,44 @@
+{
+  "name": "react-grid-list",
+  "description": "It helps you make responsive layout without any media query or using a third css library",
+  "author": "Moussa Alkaly BADJI",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "css",
+    "grid",
+    "layout",
+    "list",
+    "items"
+  ],
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.34",
+    "@types/react": "^18.2.8",
+    "@types/react-dom": "^18.2.4",
+    "@babel/polyfill": "^7.12.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel ./package --out-dir dist --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-syntax-jsx": "^7.21.4",
+    "@babel/preset-env": "^7.22.4"
+  },
+  "license": "MIT"
+}
