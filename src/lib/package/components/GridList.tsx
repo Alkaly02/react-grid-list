@@ -4,26 +4,30 @@ import EmptyList from './EmptyList'
 import ResourceDataMap from './ResourceDataMap'
 
 interface IgridList {
-    isLoading: Boolean,
+    isLoading?: Boolean,
     resourceItem: React.FC,
     resourceName: String,
     resourceData: (string | object | number)[],
-    skeleton: React.ElementType,
-    emptyComponent: React.ElementType
+    skeleton?: React.ElementType,
+    emptyComponent?: React.ElementType,
+    gap?: number,
+    cardMinWidth?: number
 }
 
 const GridList = ({
-    isLoading,
+    isLoading = false,
     resourceItem: ResourceItem,
     resourceName,
     resourceData = [],
     skeleton: LoadingSkeleton = Skeleton,
-    emptyComponent: EmptyComponent = EmptyList
+    emptyComponent: EmptyComponent = EmptyList,
+    gap = 15,
+    cardMinWidth = 250,
 }: IgridList) => {
     const container: React.CSSProperties = {
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill,minmax(250px,1fr))',
-        gap: '15px',
+        gridTemplateColumns: `repeat(auto-fill,minmax(${cardMinWidth}px,1fr))`,
+        gap: gap + 'px',
         overflowY: 'auto'
     }
     return (
