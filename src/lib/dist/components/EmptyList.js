@@ -7,10 +7,10 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _jsxRuntime = require("react/jsx-runtime");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-const Skeleton = () => {
+const EmptyList = () => {
   return /*#__PURE__*/(0, _jsxRuntime.jsx)("div", {
-    children: "Skeleton"
+    children: "EmptyList"
   });
 };
-var _default = Skeleton;
+var _default = EmptyList;
 exports.default = _default;

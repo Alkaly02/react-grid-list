@@ -17,6 +17,7 @@
   "main": "dist/index.ts",
   "module": "dist/index.ts",
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -24,7 +25,6 @@
     "@types/node": "^16.18.34",
     "@types/react": "^18.2.8",
     "@types/react-dom": "^18.2.4",
-    "@babel/polyfill": "^7.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -32,13 +32,17 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel ./package --out-dir dist --copy-files"
+    "build": "rm -rf dist && babel NODE_ENV=production ./package --out-dir dist --copy-files",
+    "build:tsc": "rimraf dist && tsc && babel ./package --out-dir dist --extensions \".tsx,.ts\" --copy-files"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.22.1",
     "@babel/plugin-syntax-jsx": "^7.21.4",
-    "@babel/preset-env": "^7.22.4"
+    "@babel/plugin-syntax-typescript": "^7.21.4",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3",
+    "@babel/preset-typescript": "^7.21.5"
   },
   "license": "MIT"
 }
