@@ -14,8 +14,8 @@
   ],
   "version": "0.1.0",
   "private": false,
-  "main": "dist/index.ts",
-  "module": "dist/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -42,7 +42,10 @@
     "@babel/plugin-syntax-typescript": "^7.21.4",
     "@babel/preset-env": "^7.22.4",
     "@babel/preset-react": "^7.22.3",
-    "@babel/preset-typescript": "^7.21.5"
+    "@babel/preset-typescript": "^7.21.5",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1"
   },
   "license": "MIT"
 }
