@@ -11,7 +11,7 @@ interface IgridList {
     skeleton?: React.ElementType,
     emptyComponent?: React.ElementType,
     gap?: number,
-    cardMinWidth?: number
+    cardWidth?: number
 }
 
 const GridList = ({
@@ -22,11 +22,11 @@ const GridList = ({
     skeleton: LoadingSkeleton = Skeleton,
     emptyComponent: EmptyComponent = EmptyList,
     gap = 15,
-    cardMinWidth = 250,
+    cardWidth = 250,
 }: IgridList) => {
     const container: React.CSSProperties = {
         display: 'grid',
-        gridTemplateColumns: `repeat(auto-fill,minmax(${cardMinWidth}px,1fr))`,
+        gridTemplateColumns: `repeat(auto-fill,minmax(${cardWidth}px,1fr))`,
         gap: gap + 'px',
         overflowY: 'auto'
     }
